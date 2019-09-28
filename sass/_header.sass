@@ -1,0 +1,42 @@
+.header
+	padding: 10px 0
+	&-nav
+		display: flex
+		justify-content: space-between
+		align-items: center
+		&__contacts
+			display: flex
+			flex-direction: column
+			text-align: right
+			color: $colorText
+		&__about
+			display: flex
+			align-items: center
+		&__geo
+			font-size: 13px
+			font-weight: 600
+			margin-bottom: 10px
+		&__phone
+			color: $colorText
+			text-decoration: none
+			font-weight: 800
+			font-size: 20px
+			display: inline-block
+		&__btn
+			margin-left: 30px
+
+
+@media (max-width: 692px)
+	.header
+		&-nav
+			&__logo
+				width: 95px
+			&__contacts
+				display: none
+			.btn
+				padding: 15px 26px
+				font-size: 13px
+				font-weight: 700
+				margin-left: 10px
+
+
