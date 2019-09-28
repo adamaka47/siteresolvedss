@@ -1,5 +1,5 @@
 .header
-	padding: 10px 0
+	padding: 12px 0
 	&-nav
 		display: flex
 		justify-content: space-between
@@ -15,18 +15,31 @@
 		&__geo
 			font-size: 13px
 			font-weight: 600
-			margin-bottom: 10px
+			margin-bottom: 5px
 		&__phone
 			color: $colorText
 			text-decoration: none
-			font-weight: 800
+			font-weight: 900
 			font-size: 20px
 			display: inline-block
 		&__btn
 			margin-left: 30px
+			font-size: 15px
+			font-weight: 800
+
+@media (max-width: 600px)
+	.header
+		&-nav
+			&__logo
+				width: 100px
+			&__phone
+				font-size: 16px
+			&__btn
+				margin-left: 15px
+				padding: 17px 20px
 
 
-@media (max-width: 692px)
+@media (max-width: 480px)
 	.header
 		&-nav
 			&__logo
@@ -38,5 +51,7 @@
 				font-size: 13px
 				font-weight: 700
 				margin-left: 10px
+
+
 
 
