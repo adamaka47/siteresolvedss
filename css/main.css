@@ -29,6 +29,16 @@ img {
   padding: 0 15px;
   margin: auto; }
 
+.section {
+  padding: 80px 0; }
+  .section-title {
+    font-size: 24px;
+    font-family: 'MSB', sans-serif;
+    font-weight: 700; }
+  .section-subtitle {
+    font-size: 16px;
+    display: block; }
+
 .btn {
   border-radius: 10px;
   background-color: #ffd200;
@@ -40,8 +50,19 @@ img {
   cursor: pointer;
   transition: all 0.4s; }
   .btn:hover {
-    color: #ffd200;
-    background-color: #333; }
+    background-color: #e0b900; }
+  .btn:active {
+    background-color: #cca800; }
+
+.input {
+  border: 1px solid #ddd;
+  padding: 20px 26px;
+  font-size: 15px;
+  border-radius: 10px; }
+
+@media (max-width: 600px) {
+  .section {
+    padding: 45px 0; } }
 
 .header {
   padding: 12px 0; }
@@ -185,3 +206,88 @@ img {
         margin-bottom: 20px; }
       .start-list__img {
         margin-right: 15px; } }
+
+.offer {
+  background: url("../img/offer_img.jpg") right center no-repeat;
+  background-size: contain;
+  position: relative; }
+  .offer::before {
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 4; }
+  .offer-items {
+    width: 50%;
+    padding-right: 92px;
+    position: relative;
+    z-index: 5; }
+  .offer__subtitle {
+    max-width: 250px;
+    margin-bottom: 30px; }
+  .offer__title {
+    margin-top: 0;
+    margin-bottom: 24px;
+    max-width: 360px;
+    line-height: 1.4; }
+  .offer__input {
+    width: 240px;
+    margin-bottom: 30px; }
+    .offer__input:first-child {
+      margin-right: 9px; }
+    .offer__input:focus {
+      outline: none;
+      border: 1px solid #ffd200; }
+  .offer__btn {
+    width: 100%;
+    min-height: 70px;
+    margin-bottom: 25px; }
+  .offer-small {
+    display: flex;
+    justify-content: space-between; }
+    .offer-small__call, .offer-small__me {
+      flex-basis: 44%;
+      font-size: 15px;
+      line-height: 1.55; }
+    .offer-small_tel {
+      font-family: 'MSB', sans-serif;
+      font-weight: 700;
+      text-decoration: none;
+      color: #333;
+      display: block; }
+
+@media (max-width: 1200px) {
+  .offer {
+    background-size: cover; }
+    .offer-items {
+      padding-right: 50px; }
+    .offer__input {
+      width: 100%;
+      margin-bottom: 12px; }
+    .offer_btn {
+      width: 100%;
+      font-size: 14px; } }
+
+@media (max-width: 600px) {
+  .offer {
+    background: none;
+    background-color: #fff; }
+    .offer-items {
+      width: 100%;
+      padding-right: 0; } }
+
+@media (max-width: 480px) {
+  .offer-small {
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
+    .offer-small__call {
+      margin-bottom: 20px; }
+    .offer-small__call, .offer-small__me {
+      max-width: 240px; }
+  .offer__btn {
+    padding: 12px 15px;
+    font-size: 13px; } }

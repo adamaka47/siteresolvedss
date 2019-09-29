@@ -1,0 +1,84 @@
+.offer
+	background: url('../img/offer_img.jpg') right center no-repeat
+	background-size: contain
+	position: relative
+	&::before
+		content: ''
+		width: 50%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background-color: #fff
+		z-index: 4
+	&-items
+		width: 50%
+		padding-right: 92px
+		position: relative
+		z-index: 5
+	&__subtitle
+		max-width: 250px
+		margin-bottom: 30px
+	&__title
+		margin-top: 0
+		margin-bottom: 24px
+		max-width: 360px
+		line-height: 1.4
+	&__input
+		width: 240px
+		margin-bottom: 30px
+		&:first-child
+			margin-right: 9px
+		&:focus
+			outline: none
+			border: 1px solid $mainColor
+	&__btn
+		width: 100%
+		min-height: 70px
+		margin-bottom: 25px
+	&-small
+		display: flex
+		justify-content: space-between
+		&__call, &__me
+			flex-basis: 44%
+			font-size: 15px
+			line-height: 1.55
+		&_tel
+			+bold
+			text-decoration: none
+			color: $colorText
+			display: block
+
+@media (max-width: 1200px)
+	.offer
+		background-size: cover
+		&-items
+			padding-right: 50px
+		&__input
+			width: 100%
+			margin-bottom: 12px
+		&_btn
+			width: 100%
+			font-size: 14px
+
+@media (max-width: 600px)
+	.offer
+		background: none
+		background-color: #fff
+		&-items
+			width: 100%
+			padding-right: 0
+
+@media (max-width: 480px)
+	.offer
+		&-small
+			flex-direction: column
+			align-items: center
+			text-align: center
+			&__call
+				margin-bottom: 20px
+			&__call, &__me
+				max-width: 240px
+		&__btn
+			padding: 12px 15px
+			font-size: 13px
