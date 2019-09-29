@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Basis Template</title>
 </head>
@@ -25,7 +26,7 @@
                             +7 (495) 228-44-42
                         </a>
                     </div>
-                    <button class="btn header-nav__btn">
+                    <button class="btn header-nav__btn" id="btn">
                         Перезвоните мне
                     </button>
                 </div>
@@ -101,7 +102,71 @@
                 </div>
             </div>
         </section>
+
+
+        <section class="section portfolio">
+            <div class="container">
+                <h2 class="section-title portfolio__title">
+                    Работая с 2007 года, сделали более 5000 ремонтов в квартирах и домах
+                </h2>
+                <div class="slider">
+                    <div class="slider__item"><img src="img/slide1.jpg" alt="Ремонт квартир и домов"></div>
+                    <div class="slider__item"><img src="img/slide2.jpg" alt="Ремонт квартир и домов"></div>
+                    <div class="slider__item"><img src="img/slide3.jpg" alt="Ремонт квартир и домов"></div>
+                    <div class="slider__item"><img src="img/slide2.jpg" alt="Ремонт квартир и домов"></div>
+                </div>
+                <div class="arrows portfolio__arrows">
+                    <div class="arrows__left">
+                        <img src="img/left-arrow.png" alt="Левая стрелка">
+                    </div>
+                    <div class="arrows__right">
+                        <img src="img/right-arrow.png" alt="Правая стрелка">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal">
+            <div class="modal-window">
+                <button class="modal-window__close">
+                    &times;
+                </button>
+                <h3 class="modal-window__title">
+                    Всплывающее окно
+                </h3>
+            </div>
+        </div>
+
     </main>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                prevArrow: $('.arrows__left'),
+                nextArrow: $('.arrows__right'),
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 800,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            })
+        });
+    </script>
 </body>
 </html>
