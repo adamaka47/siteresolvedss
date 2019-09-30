@@ -16,6 +16,18 @@
 		padding-right: 92px
 		position: relative
 		z-index: 5
+	#offer-form
+		position: relative
+		input.error
+			border: 2px solid red
+		label.error
+			color: red
+			position: absolute
+			top: -20px
+			left: 0
+		label.error:nth-child(2)
+			right: 0
+			left: auto
 	&__subtitle
 		max-width: 250px
 		margin-bottom: 30px
@@ -27,7 +39,7 @@
 		text-align: left
 	&__input
 		width: 240px
-		margin-bottom: 30px
+		margin-bottom: 10px
 		&:first-child
 			margin-right: 9px
 	&__btn
@@ -50,11 +62,16 @@
 @media (max-width: 1200px)
 	.offer
 		background-size: cover
+		#offer-form
+			label.error
+				position: static
+				display: block
+				margin-bottom: 20px
 		&-items
 			padding-right: 50px
 		&__input
 			width: 100%
-			margin-bottom: 12px
+			margin-bottom: 5px
 		&_btn
 			width: 100%
 			font-size: 14px

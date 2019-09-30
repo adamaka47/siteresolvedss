@@ -261,6 +261,18 @@ img {
     padding-right: 92px;
     position: relative;
     z-index: 5; }
+  .offer #offer-form {
+    position: relative; }
+    .offer #offer-form input.error {
+      border: 2px solid red; }
+    .offer #offer-form label.error {
+      color: red;
+      position: absolute;
+      top: -20px;
+      left: 0; }
+    .offer #offer-form label.error:nth-child(2) {
+      right: 0;
+      left: auto; }
   .offer__subtitle {
     max-width: 250px;
     margin-bottom: 30px; }
@@ -272,7 +284,7 @@ img {
     text-align: left; }
   .offer__input {
     width: 240px;
-    margin-bottom: 30px; }
+    margin-bottom: 10px; }
     .offer__input:first-child {
       margin-right: 9px; }
   .offer__btn {
@@ -296,11 +308,15 @@ img {
 @media (max-width: 1200px) {
   .offer {
     background-size: cover; }
+    .offer #offer-form label.error {
+      position: static;
+      display: block;
+      margin-bottom: 20px; }
     .offer-items {
       padding-right: 50px; }
     .offer__input {
       width: 100%;
-      margin-bottom: 12px; }
+      margin-bottom: 5px; }
     .offer_btn {
       width: 100%;
       font-size: 14px; } }
