@@ -75,6 +75,7 @@
                 </div>
             </div>
         </section>
+
         <section class="offer section" id="offer">
             <div class="container">
                 <div class="offer-items">
@@ -180,6 +181,71 @@
             </div>
         </section>
 
+        <section class="section answer">
+            <div class="container">
+                <div class="answer-items">
+                    <div class="answer-question">
+                        <h3 class="answer-question__title">
+                            Мы можем озвучить Вам примерную стоимость работы и материалов по телефону
+                        </h3>
+                        <span class="answer-question__subtitle">
+                            Для этого нужно ответить на 4 вопроса:
+                        </span>
+                        <ul class="answer-question__list">
+                            <li class="answer-question__item">
+                                <span class="answer-question__counter">
+                                    1
+                                </span>
+                                <span class="answer-question__text">
+                                    Какова площадь помещения
+                                </span>
+                            </li>
+                            <li class="answer-question__item">
+                                <span class="answer-question__counter">
+                                    2
+                                </span>
+                                <span class="answer-question__text">
+                                    У вас новостройка или вторичное жилье?
+                                </span>
+                            </li>
+                            <li class="answer-question__item">
+                                <span class="answer-question__counter">
+                                    3
+                                </span>
+                                <span class="answer-question__text">
+                                    Где находится помещение, в котором будет производиться ремонт
+                                </span>
+                            </li>
+                            <li class="answer-question__item">
+                                <span class="answer-question__counter">
+                                    4
+                                </span>
+                                <span class="answer-question__text">
+                                    Назначение помещения?
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form answer-form">
+                        <h3 class="answer-form__title">
+                            Оставьте заявку на бесплатный расчет ремонта по телефону
+                        </h3> 
+                        <span class="answer-form__subtitle">
+                            Для этого заполните форму ниже
+                        </span>
+                        <form id="answer-form">
+                            <input type="text" name="username" class="input answer-form__input" placeholder="Ваше имя">
+                            <input type="tel" name="phone" class="input answer-form__input" placeholder="Ваш телефон">
+                            <button class="btn answer-form__btn">Узнать стоимость</button>
+                            <small class="small answer-form__small">
+                                Мы перезвоним Вам в течение 60 секунд
+                            </small>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <div class="modal">
             <div class="modal-window">
                 <button class="modal-window__close">
@@ -196,11 +262,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
     <script>
         $(document).ready(function() {
             new WOW().init()
-            
+
+            // форма
+
+            $('#answer-form').validate({
+                rules: {
+                    username: "required",
+                    phone: "required"
+                },
+                messages: {
+                    username: 'Напечатайте имя',
+                    phone: 'Введите пожалуйста телефон'
+                }
+            })
+
+            // маска
+
+            $('input[type="tel"]').mask("+7 (999) 999-99-99")
+
             $('.slider').slick({
                 slidesToShow: 3,
                 slidesToScroll: 1,

@@ -1,0 +1,105 @@
+.answer
+	background: url('../img/answer_bg.jpg') left center repeat-y, #f8f7f6 url('../img/answer_form.jpg') right center no-repeat
+	background-size: 50%, 50%
+	&-items
+		display: flex
+	&-question, &-form
+		flex-basis: 50%
+	&-form
+		.error
+			border: 2px solid red
+		label.error
+			color: red
+			display: block
+			margin-bottom: 20px
+			border: none
+		padding-left: 200px
+		text-align: center
+		&__title
+			@extend .answer-question__title
+		&__subtitle
+			display: block
+			font-size: 16px
+			margin-bottom: 50px
+		&__input
+			width: 100%
+			max-width: 370px
+			margin-bottom: 15px
+		&__btn
+			display: block
+			min-height: 70px
+			width: 100%
+			max-width: 370px
+			margin: auto
+			margin-top: 15px
+			margin-bottom: 32px
+		&__small
+			font-size: 15px
+	&-question
+		padding-right: 70px
+		&__title
+			font-size: 22px
+			margin-bottom: 50px
+			+bold
+		&__subtitle
+			display: block
+			font-size: 16px
+			margin-bottom: 92px
+		&__list
+			margin: 0
+			padding: 0
+			list-style-type: none
+		&__counter
+			width: 35px
+			display: flex
+			align-items: center
+			justify-content: center
+			height: 35px
+			border-radius: 50%
+			border: 2px solid $colorText
+			font-size: 14px
+			margin-right: 35px
+		&__item
+			display: flex
+			align-items: center
+			+bold
+			margin-bottom: 25px
+			&:last-child
+				margin-bottom: 0
+		&__text
+			display: inline-block
+			max-width: 360px
+
+@media (max-width: 1200px)
+	.answer
+		&-question
+			padding-right: 30px
+			&__title
+				font-size: 20px
+				margin-bottom: 15px
+			&__subtitle
+				margin-bottom: 25px
+			&__text
+				font-size: 14px
+				max-width: 260px
+			&__counter
+				margin-right: 20px
+		&-form
+			padding-left: 30px
+			&__subtitle
+				margin-bottom: 25px
+
+@media (max-width: 600px)
+	.answer
+		background: url('../img/answer_bg.jpg') top center repeat-x, #f8f7f6 url('../img/answer_form.jpg') bottom center no-repeat
+		background-size: 100% 50%, cover
+		&-items
+			flex-direction: column
+		&-form
+			margin-top: 80px
+			padding-left: 0
+		&-question
+			padding-right: 0
+			&__text
+				max-width: 192px
+
