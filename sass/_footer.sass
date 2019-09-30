@@ -1,0 +1,78 @@
+.footer
+	position: relative
+
+#map
+	width: 50%
+	position: absolute
+	top: 0
+	left: 0
+
+.contacts
+	display: flex
+	justify-content: flex-end
+	&-block
+		flex-basis: 50%
+		padding-top: 100px
+		padding-left: 200px
+		&__title
+			margin: 0
+			margin-bottom: 100px
+			+bold
+			font-size: 22px
+			line-height: 1.4
+	&-list
+		list-style-type: none
+		margin: 0
+		padding: 0
+		&__item
+			display: flex
+			margin-bottom: 40px
+			&:last-child
+				margin-bottom: 0
+		&__icon
+			width: 20px
+			height: 20px
+			line-height: 20px
+			margin-right: 22px
+			img
+				margin: auto
+		&__text
+			span
+				margin-top: 5px
+				display: block
+				+bold
+			a
+				+bold
+				text-decoration: none
+				display: block
+				color: $colorText
+				margin-top: 5px
+
+@media (max-width: 1200px)
+	.contacts
+		&-block
+			padding-left: 30px
+			text-align: center
+			&__title
+				font-size: 20px
+		&-list
+			text-align: left
+
+@media (max-width: 800px)
+	#map
+		top: auto
+		bottom: -700px
+		width: 100%
+	.contacts
+		&-block
+			padding-top: 45px
+			padding-left: 0
+			flex-basis: 100%
+			&__title
+				margin: auto
+				margin-bottom: 50px
+				max-width: 500px
+
+		&-list
+			padding-left: 20px
+
